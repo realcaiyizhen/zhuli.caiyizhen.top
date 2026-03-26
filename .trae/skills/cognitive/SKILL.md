@@ -35,8 +35,8 @@ description: "提供认知升级、思维模式转变和认知能力发展指导
 
 要了解用户的认知发展历程和背景，请查阅以下参考资料文件：
 
-- **[认知成长](knowledge/cognitive-growth.md)** - 思维能力成长历史、从牛马思维到做人思维的转变历程、觉醒过程
-- **[牛马案例对比](knowledge/cognitive-cases.md)** - 各类牛马vs做人案例对比，帮助用户理解思维转变的必要性和方法
+- **[认知成长](../../knowledge/cognitive-growth.md)** - 思维能力成长历史、从牛马思维到做人思维的转变历程、觉醒过程
+- **[牛马案例对比](../../knowledge/cognitive-cases.md)** - 各类牛马vs做人案例对比，帮助用户理解思维转变的必要性和方法
 
 
 

@@ -34,7 +34,7 @@ description: "提供健康管理、疾病治疗记录、用药指导和健康数
 
 要了解用户的健康状况和治疗记录，请查阅以下参考资料文件：
 
-- **[干扰素治疗记录](interferon-treatment.md)** - 干扰素治疗的完整记录，包括用药方案、治疗过程、效果评估等
+- **[干扰素治疗记录](../../knowledge/interferon-treatment.md)** - 干扰素治疗的完整记录，包括用药方案、治疗过程、效果评估等
 - **[腾讯文档链接](https://docs.qq.com/sheet/DYnBRSHphbWtGV3ZS?tab=BB08J2)** - 在线治疗记录表格（需要登录查看）
 
 ## 使用模式
