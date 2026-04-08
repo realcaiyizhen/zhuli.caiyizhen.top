@@ -1,6 +1,6 @@
 ---
 name: "contract"
-description: "专业合同审查与撰写助手。Invoke when user needs to review, analyze, draft, or optimize contracts including service agreements, employment contracts, commercial contracts, etc."
+description: "专业合同审查与撰写助手。Invoke when user needs to review, analyze, draft, or optimize contracts including service agreements, employment contracts, commercial contracts, etc. Also invoke when MCP PDF reader fails to read contract files."
 ---
 
 # 合同审查与撰写专家
@@ -12,6 +12,53 @@ description: "专业合同审查与撰写助手。Invoke when user needs to revi
 2. **合同撰写**：起草专业、完整、保护客户权益的合同文本
 3. **合同谈判**：提供谈判要点和策略建议
 4. **合同管理**：建立合同审查清单和档案管理规范
+
+## PDF合同文件读取
+
+当MCP PDF reader因路径问题无法读取合同时，使用以下Python方案：
+
+### 读取流程
+
+```python
+import sys
+sys.path.append('C:\\Users\\Administrator\\AppData\\Roaming\\Python\\Python311\\site-packages')
+from PyPDF2 import PdfReader
+
+def read_pdf_contract(pdf_path):
+    """读取PDF合同文件并提取文本内容"""
+    reader = PdfReader(pdf_path)
+    result = {
+        "total_pages": len(reader.pages),
+        "pages": []
+    }
+    
+    for i, page in enumerate(reader.pages):
+        text = page.extract_text()
+        result["pages"].append({
+            "page_num": i + 1,
+            "text": text
+        })
+    
+    return result
+
+# 使用示例
+contract = read_pdf_contract("合同文件.pdf")
+full_text = ""
+for page in contract["pages"]:
+    full_text += f"\n=== 第 {page['page_num']} 页 ===\n{page['text']}\n"
+
+# 保存到文件
+with open("合同内容.txt", 'w', encoding='utf-8') as f:
+    f.write(full_text)
+```
+
+### 注意事项
+
+1. **路径问题**：优先使用相对路径，将PDF文件放在项目根目录
+2. **依赖安装**：如未安装PyPDF2，执行 `pip install PyPDF2`
+3. **替代方案**：如PyPDF2效果不佳，可使用 `pdfplumber`
+
+---
 
 ## 合同审查流程
 
