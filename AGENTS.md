@@ -59,7 +59,8 @@
 | **cognitive** | `cognitive-growth.md`<br>`cognitive-cases.md` | 了解思维发展历程和案例对比 |
 | **family** | `family-system.md` | 了解家庭系统背景和结构 |
 | **health** | `interferon-treatment.md`<br>`family-health.md` | 了解治疗记录和家庭成员健康状况 |
-| **interview** | `interview.md`<br>`resume&projects.md` | 面试记录管理和面试准备参考 |
+| **interview-coach** | `interview.md`<br>`resume&projects.md`<br>`cognitive-growth.md` | 面试记录管理、面试指导、面试准备参考 |
+| **interview-demo** | `resume&projects.md` | 面试现场演示（仅展示必要信息） |
 | **project** | - | 项目立项与执行（不依赖特定知识库） |
 | **contract** | `contract-case.md` | 参考各类合同案例 |
 | **parenting** | - | 育儿指导（使用内置宝宝信息） |

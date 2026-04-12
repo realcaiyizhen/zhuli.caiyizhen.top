@@ -46,21 +46,23 @@ Skill 是教 Claude 如何完成特定任务的指南。好的 Skill 应该：
    - 客观可验证的输出（文件处理、数据提取）→ 建议测试
    - 主观输出（写作风格、创意）→ 可不测试
 
-### Step 2: 检查知识库（可选）
+### Step 2: 检查知识库关联（重要）
 
-如果 Skill 需要共享的背景信息，可以创建知识库文件：
+**知识库关联规则**：
+1. **在 AGENTS.md 中统一管理** - 所有 Skill 与知识库的关联关系必须在 AGENTS.md 的表格中声明
+2. **不在 SKILL.md 中重复声明** - Skill 文件只描述使用知识库的逻辑，不列出具体关联哪些文件
+3. **按需读取** - Skill 根据问题类型动态决定读取哪些知识库文件
 
+**AGENTS.md 知识库关联表格式**：
+```markdown
+| Skill | 调用的知识库文件 | 用途说明 |
+|-------|-----------------|----------|
+| **skill-name** | `file1.md`<br>`file2.md` | 用途描述 |
 ```
-knowledge/
-├── career-strategy.md      # 职业发展战略
-├── family-system.md        # 家庭系统分析
-└── ...
-```
 
-**设计原则**：
-- 多个 Skill 需要共享的背景信息 → 放 `knowledge/`
-- Skill 私有的详细文档 → 放 Skill 自己的 `references/`
-- 在 Skill 中显式指定读取哪个知识库文件
+**知识库存放位置**：
+- 共享知识库 → `knowledge/` 目录
+- Skill 私有文档 → `skill-name/references/` 目录
 
 **知识库文件格式建议**：
 ```markdown
@@ -321,33 +323,35 @@ Input: Fixed login bug on mobile
 Output: fix(login): resolve mobile authentication issue
 ```
 
-### 4. 知识库联动（可选）
+### 4. 知识库联动
 
-如果你的项目使用 `knowledge/` 目录共享背景信息：
+**重要原则**：
+- **知识库关联在 AGENTS.md 中统一管理**，不在 SKILL.md 中重复声明
+- Skill 中只描述"如何使用"知识库，不列出"关联哪些"知识库
 
+**在 Skill 中描述知识库使用逻辑**：
 ```markdown
-## 关联知识库
+## 知识库使用
 
-根据问题类型，查阅以下知识库文件：
-- `knowledge/career-strategy.md` - 职业发展战略
-- `knowledge/resume&projects.md` - 工作经历和项目
+根据问题类型，按需读取知识库文件：
+- 如果用户问职业规划 → 读取职业发展战略相关文档
+- 如果用户问项目经历 → 读取简历项目相关文档
 
-> 在 Skill 指令中显式指定读取哪个文件，例如：
-> "如果用户问职业规划，先读取 `knowledge/career-strategy.md`"
+> 实际关联的知识库文件列表见 AGENTS.md 中的 Skill 与知识库关系表
 ```
 
 **知识库 vs Skill 私有文档**：
 
-| 类型 | 位置 | 用途 |
-|------|------|------|
-| 共享知识库 | `knowledge/` | 多个 Skill 共用的背景信息 |
-| Skill 私有文档 | `skill-name/references/` | 该 Skill 专用的详细指南 |
+| 类型 | 位置 | 用途 | 声明位置 |
+|------|------|------|----------|
+| 共享知识库 | `knowledge/` | 多个 Skill 共用的背景信息 | AGENTS.md |
+| Skill 私有文档 | `skill-name/references/` | 该 Skill 专用的详细指南 | Skill 内部引用 |
 
 **示例**：
 ```markdown
 ## 参考资料
 
-- `knowledge/family-system.md` - 家庭系统背景（共享知识库）
+- 共享知识库（见 AGENTS.md 关联表）- 家庭系统背景
 - `references/communication-patterns.md` - 沟通技巧详解（Skill 私有）
 ```
 ```
