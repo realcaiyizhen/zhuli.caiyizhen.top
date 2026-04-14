@@ -59,12 +59,13 @@
 | **cognitive** | `cognitive-growth.md`<br>`cognitive-cases.md` | 了解思维发展历程和案例对比 |
 | **family** | `family-system.md` | 了解家庭系统背景和结构 |
 | **health** | `interferon-treatment.md`<br>`family-health.md` | 了解治疗记录和家庭成员健康状况 |
-| **interview-coach** | `interview.md`<br>`resume&projects.md`<br>`cognitive-growth.md` | 面试记录管理、面试指导、面试准备参考 |
-| **interview-demo** | `resume&projects.md` | 面试现场演示（仅展示必要信息） |
+| **interview-coach** | `interview.md`<br>`resume&projects.md`<br>`resume-ai-solution-expert.md`<br>`cognitive-growth.md` | 面试记录管理、面试指导、面试准备参考 |
+| **interview-demo** | `resume&projects.md`<br>`resume-ai-solution-expert.md` | 面试现场演示（仅展示必要信息） |
 | **project** | - | 项目立项与执行（不依赖特定知识库） |
 | **contract** | `contract-case.md` | 参考各类合同案例 |
 | **parenting** | - | 育儿指导（使用内置宝宝信息） |
 | **knowledge-manager** | - | 管理知识库文件本身 |
+| **skill-creator-enhanced** | `skill-development.md` | Skill开发技巧、最佳实践、机器评估方法 |
 | **business** | `cognitive-growth.md`<br>`business-incubation.md` | 认知发展历史、思维模式转变、培养模式与商业孵化 |
 
 ## 使用指南
@@ -103,4 +104,6 @@
 | `interferon-treatment.md` | 干扰素治疗完整记录，包括用药方案、治疗过程、检查结果、身体反应跟踪 | 干扰素、治疗记录、健康数据、用药跟踪、乙肝、医疗 |
 | `interview.md` | 面试记录汇总，包括各公司面试详情、岗位分析、面试准备、过程记录和反馈总结 | 面试、求职、公司背景、岗位要求、面试总结、职业发展 |
 | `resume&projects.md` | 完整记录蔡大20年职场经历，包括独立AI项目开发、各公司工作内容和成绩，总结探索性和利用性工作能力 | 简历、工作经历、项目、AI、产品管理、技术、创业思维、职业发展 |
+| `resume-ai-solution-expert.md` | 面向AI解决方案岗位的简历，强调ToB项目交付、客户需求对接和方案设计能力 | 简历、AI解决方案、ToB、面试、求职、方案设计、客户需求 |
+| `skill-development.md` | 记录Skill开发的技巧、最佳实践和踩坑经验 | skill、开发技巧、最佳实践、机器评估、任务拆解、注意力机制、过拟合 |
 | `business-incubation.md` | 记录商业孵化的相关知识，包括培养模式、价值共生、项目起盘等核心概念 | 商业、孵化、培养模式、起盘、价值共生 |
