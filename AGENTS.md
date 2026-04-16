@@ -122,3 +122,4 @@
 | `resume-ai-solution-expert.md` | 面向AI解决方案岗位的简历，强调ToB项目交付、客户需求对接和方案设计能力 | 简历、AI解决方案、ToB、面试、求职、方案设计、客户需求 |
 | `skill-development.md` | 记录Skill开发的技巧、最佳实践和踩坑经验 | skill、开发技巧、最佳实践、机器评估、任务拆解、注意力机制、过拟合 |
 | `business-incubation.md` | 记录商业孵化的相关知识，包括培养模式、价值共生、项目起盘等核心概念 | 商业、孵化、培养模式、起盘、价值共生 |
+| `projects/expert-witness-assistant.md` | 专家证人助手AI项目规划，涵盖争议分析、证据检索、模拟法庭等五大核心场景 | AI项目、法律科技、专家证人、文档分析、模拟法庭 |
