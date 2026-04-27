@@ -47,6 +47,20 @@
 - 正在向"繁荣发展模式"系统转变
 - 具备经营角度，进行人生战略规划
 
+### 记录偏好
+
+蔡大重视将真实经历转化为可复用的认知资产，当对话中出现以下内容时，主动询问是否需要记录到知识库：
+
+**触发条件**（满足任一即可）：
+1. 真实事件描述：面试经历、冲突处理、重要决策、项目复盘等
+2. 认知升级：框架转变、顿悟时刻、方法论提炼
+3. 可复用经验：踩坑记录、成功案例、策略调整
+
+**记录方式**：
+- 调用 `knowledge-manager` Skill 进行记录
+- 由 Skill 决定具体写入哪个知识库文件
+- 询问话术："这次对话涉及[具体主题]，很有价值。需要我记录到知识库吗？"
+
 ## Skill 与知识库关系
 
 知识库文件位于 `knowledge/` 目录，用于存储用户的个人背景信息，供多个 Skill 共享使用。
@@ -59,12 +73,14 @@
 | **cognitive** | `cognitive-growth.md`<br>`cognitive-cases.md` | 了解思维发展历程和案例对比 |
 | **family** | `family-system.md` | 了解家庭系统背景和结构 |
 | **health** | `interferon-treatment.md`<br>`family-health.md` | 了解治疗记录和家庭成员健康状况 |
-| **interview-coach** | `interview.md`<br>`resume&projects.md`<br>`cognitive-growth.md` | 面试记录管理、面试指导、面试准备参考 |
-| **interview-demo** | `resume&projects.md` | 面试现场演示（仅展示必要信息） |
+| **interview-coach** | `interview.md`<br>`resume&projects.md`<br>`resume-ai-solution-expert.md`<br>`cognitive-growth.md` | 面试记录管理、面试指导、面试准备参考 |
+| **interview-demo** | `resume&projects.md`<br>`resume-ai-solution-expert.md` | 面试现场演示（仅展示必要信息） |
+| **interview-resume-maker** | `resume*.md` | 简历转HTML、A4打印版PDF生成 |
 | **project** | - | 项目立项与执行（不依赖特定知识库） |
 | **contract** | `contract-case.md` | 参考各类合同案例 |
 | **parenting** | - | 育儿指导（使用内置宝宝信息） |
 | **knowledge-manager** | - | 管理知识库文件本身 |
+| **skill-creator-enhanced** | `skill-development.md` | Skill开发技巧、最佳实践、机器评估方法 |
 | **business** | `cognitive-growth.md`<br>`business-incubation.md` | 认知发展历史、思维模式转变、培养模式与商业孵化 |
 
 ## 使用指南
@@ -104,4 +120,7 @@
 | `interview.md` | 面试记录汇总，包括各公司面试详情、岗位分析、面试准备、过程记录和反馈总结 | 面试、求职、公司背景、岗位要求、面试总结、职业发展 |
 | `resume&projects.md` | 完整记录蔡大20年职场经历，包括独立AI项目开发、各公司工作内容和成绩，总结探索性和利用性工作能力 | 简历、工作经历、项目、AI、产品管理、技术、创业思维、职业发展 |
 | `resume-ai-solution-expert.md` | 面向AI解决方案岗位的简历，强调ToB项目交付、客户需求对接和方案设计能力 | 简历、AI解决方案、ToB、面试、求职、方案设计、客户需求 |
+| `skill-development.md` | 记录Skill开发的技巧、最佳实践和踩坑经验 | skill、开发技巧、最佳实践、机器评估、任务拆解、注意力机制、过拟合 |
 | `business-incubation.md` | 记录商业孵化的相关知识，包括培养模式、价值共生、项目起盘等核心概念 | 商业、孵化、培养模式、起盘、价值共生 |
+| `projects/expert-witness-assistant.md` | 专家证人助手AI项目规划，涵盖争议分析、证据检索、模拟法庭等五大核心场景 | AI项目、法律科技、专家证人、文档分析、模拟法庭 |
+| `projects/expert-witness-assistant-prd.md` | 专家证人资料检索助手PRD，含技术方案、功能需求、开发计划 | PRD、产品需求、开发规划、PDF检索、向量数据库 |

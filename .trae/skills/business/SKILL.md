@@ -3,18 +3,9 @@ name: "business"
 description: "帮助项目从0到1起盘，包括认知重构、政府补贴对接、资源整合、商业模式设计、项目包装。Invoke when user needs to start a new business/project, figure out startup strategy, apply for government subsidies, connect resources, or design go-to-market strategy."
 ---
 
-## 知识库
+## 知识库使用
 
-| 知识库文件 | 用途 |
-|------------|------|
-| `knowledge/cognitive-growth.md` | 认知发展历史、思维模式转变、三种职业发展模式认知 |
-
-## 核心原则
-
-使用此技能时，必须结合用户的认知特质：
-- **危机适应体背景**：用户擅长在压力下突破，但需转向主动创造
-- **价值共生思维**：从"独自应对危机的幸存者"转向"帮助他人应对危机的向导"
-- **真实性的觉醒**：强调真实而非包装，建立双向选择而非被挑选
+根据 AGENTS.md 中的 Skill-知识库关系表，按需读取关联的知识库文件以了解用户认知背景。
 
 # 起盘助手
 

@@ -98,12 +98,32 @@ description: "管理 knowledge/ 目录下的知识库文件。Invoke when user n
    - 添加新文件条目：文件名、内容摘要、关键词
    - 保持表格按字母顺序或逻辑顺序排列
     ↓
-4. 【必须】检查 Skill-知识库关系表：
-   - 如果新文件被某个 Skill 使用，更新对应表格
-   - 如果未被使用，无需更新
+4. 【必须】检查并更新 Skill-知识库关系表：
+   - 读取 AGENTS.md 找到"Skill 与知识库关系"表格
+   - 判断新文件应该被哪些 Skill 使用（见下方判断标准）
+   - 在对应 Skill 行的"调用的知识库文件"列添加新文件
 ```
 
 **⚠️ 新建文件后忘记更新 AGENTS.md 是常见错误，必须避免！**
+
+#### Skill 关联判断标准
+
+新文件应该被添加到 Skill 关联表中，**如果满足以下任一条件**：
+
+| 条件 | 示例 |
+|-----|------|
+| 文件内容是某类问题的核心参考资料 | 简历类文件 → `interview-coach` skill |
+| 文件包含某 Skill 需要展示/引用的信息 | 简历类文件 → `interview-demo` skill |
+| 文件内容与某 Skill 的职责直接相关 | 面试记录 → `interview-coach` skill |
+
+**常见关联模式**：
+- **简历/项目经历文件** → 关联 `interview-coach`、`interview-demo`、`career`
+- **面试记录文件** → 关联 `interview-coach`
+- **认知成长/思维转变文件** → 关联 `cognitive`、`career`、`business`
+- **家庭相关文件** → 关联 `family`
+- **健康/治疗记录文件** → 关联 `health`
+- **合同案例文件** → 关联 `contract`
+- **商业孵化相关文件** → 关联 `business`
 
 ## 内容合并示例
 
